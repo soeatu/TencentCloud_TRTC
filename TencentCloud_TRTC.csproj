@@ -26,6 +26,16 @@
     <Reference Include="zlib.net">
       <HintPath>thirdparty\zlib.net.dll</HintPath>
     </Reference>
+  　//それぞれのプラットフォームの下に引用を追加します
+　　<Reference Include="ManageLiteAV" Condition="'$(Platform)' == 'x64'">
+　　　<HintPath>SDK\CSharp\Win64\lib\ManageLiteAV.dll</HintPath>
+　　</Reference>
+　　<Reference Include="ManageLiteAV" Condition="'$(Platform)' == 'AnyCPU'">
+　　　<HintPath>SDK\CSharp\Win64\lib\ManageLiteAV.dll</HintPath>
+　　</Reference>
+　　<Reference Include="ManageLiteAV" Condition="'$(Platform)' == 'x86'">
+　　　<HintPath>SDK\CSharp\Win32\lib\ManageLiteAV.dll</HintPath>
+　　</Reference>
   </ItemGroup>
 
 </Project>
